@@ -21,17 +21,17 @@ import javax.persistence.Table;
 @Table(name = "tasks")  //tasksテーブルを作成
 public class Task {
     @Id
-    @Column(name = "ID")    //IDカラム
+    @Column(name = "id")    //IDカラム
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "Creater_at", nullable = false)  //作成日時カラム
+    @Column(name = "created_at", nullable = false)  //作成日時カラム
     private Timestamp created_at;
 
-    @Column(name = "Updated_at", nullable = false)  //更新日時カラム
+    @Column(name = "updated_at", nullable = false)  //更新日時カラム
     private Timestamp updated_at;
 
-    @Column(name = "Content", length = 255, nullable = false)   //content(タスクの内容)カラム
+    @Column(name = "content", length = 255, nullable = false)   //content(タスクの内容)カラム
     private String content;
 
     //以下，setter/getterメソッド
